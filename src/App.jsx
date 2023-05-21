@@ -7,10 +7,6 @@ import Projects from "./Projects";
 const Body = styled.div`
   height: 100%;
   width: 100%;
-
-  & .innerParent > * {
-    border-bottom: 1px solid white;
-  }
 `;
 
 function App() {
