@@ -19,7 +19,6 @@ const Body = styled.div`
       text-align: left;
       color: rgb(78, 159, 61);
       text-decoration: none;
-      font-size: 17px;
       transition: all 0.2s;
       :hover {
         cursor: pointer;

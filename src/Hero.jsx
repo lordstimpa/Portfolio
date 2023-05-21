@@ -2,25 +2,29 @@ import styled from "styled-components";
 
 const Body = styled.div`
   height: 100vh;
-  border-bottom: 1px solid white;
+
   & .Parent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+
     & :nth-child(3) a {
       margin: 0 1em;
       transition: 0.2s ease-in-out;
+
       :hover {
         cursor: pointer;
         color: rgb(78, 159, 61);
       }
     }
   }
+
   & .Child1 {
     width: 90%;
     margin-top: 2em;
+
     & h1 {
       font-size: 3.2em;
       padding: 0 0.1em;
@@ -30,17 +34,20 @@ const Body = styled.div`
       background-color: rgb(78, 159, 61);
     }
   }
+
   & .Child2 {
     width: 90%;
     margin-top: 2em;
     border-top: 1px solid rgb(78, 159, 61);
     border-left: 1px solid rgb(78, 159, 61);
     background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+
     & p {
       padding: 1em;
       margin: 0;
     }
   }
+
   // Blend in on page reload
   @keyframes blendIn {
     0% {

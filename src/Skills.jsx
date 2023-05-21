@@ -29,36 +29,32 @@ const Body = styled.div`
     .Child2,
     .Child3 {
       width: 90%;
+      margin-top: 2em;
     }
 
-    & .Child1 h1 {
-      width: 2.5em;
+    & h2 {
       padding: 0 0.1em;
       margin: 0;
+      font-size: 2em;
       text-align: center;
       color: rgb(25, 26, 25);
       background-color: rgb(78, 159, 61);
     }
 
+    & p {
+      padding: 0 1em;
+    }
+
     & .Child2 {
-      margin-top: 2em;
       border-bottom: 1px solid rgb(78, 159, 61);
       border-left: 1px solid rgb(78, 159, 61);
       background: linear-gradient(190deg, rgb(25, 26, 25), rgb(0, 0, 0));
-      & p {
-        padding: 0 1em;
-      }
     }
 
     & .Child3 {
-      margin-top: 2em;
       border-top: 1px solid rgb(78, 159, 61);
       border-right: 1px solid rgb(78, 159, 61);
       background: linear-gradient(45deg, rgb(25, 26, 25), rgb(0, 0, 0));
-
-      & p {
-        padding: 0 1em;
-      }
 
       & .Container1,
       .Container2,
@@ -88,7 +84,7 @@ const Skills = () => {
     <Body>
       <div className="Parent">
         <div className="Child1">
-          <h1>Skills</h1>
+          <h2>Skills</h2>
         </div>
         <div className="Child2">
           <p>
