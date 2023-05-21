@@ -32,7 +32,7 @@ const Body = styled.div`
   & .burgerMenu {
     background: rgb(0, 0, 0);
     text-align: right;
-    padding: 5px;
+    padding: 0.2em 1.5em;
     & :first-child {
       font-size: 3em;
       transition: 0.2s;

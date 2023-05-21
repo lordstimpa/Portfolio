@@ -22,7 +22,6 @@ const Body = styled.div`
     width: 90%;
     margin-top: 2em;
     & h1 {
-      width: 6.1em;
       font-size: 3.2em;
       padding: 0 0.1em;
       margin: 0;
@@ -34,8 +33,9 @@ const Body = styled.div`
   & .Child2 {
     width: 90%;
     margin-top: 2em;
+    border-top: 1px solid rgb(78, 159, 61);
     border-left: 1px solid rgb(78, 159, 61);
-    background: linear-gradient(260deg, rgb(25, 26, 25), rgb(0, 0, 0));
+    background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
     & p {
       padding: 1em;
       margin: 0;

@@ -1,18 +1,36 @@
 import styled from "styled-components";
+import {
+  DiHtml5,
+  DiCss3,
+  DiJavascript1,
+  DiReact,
+  DiDotnet,
+  DiGit,
+} from "react-icons/di";
+import {
+  SiCsharp,
+  SiPostgresql,
+  SiMicrosoftsqlserver,
+  SiJson,
+} from "react-icons/si";
+import { TbSql } from "react-icons/tb";
 
 const Body = styled.div`
   height: 100vh;
+
   & .Parent {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     & .Child1,
     .Child2,
     .Child3 {
       width: 90%;
     }
+
     & .Child1 h1 {
       width: 2.5em;
       padding: 0 0.1em;
@@ -21,6 +39,7 @@ const Body = styled.div`
       color: rgb(25, 26, 25);
       background-color: rgb(78, 159, 61);
     }
+
     & .Child2 {
       margin-top: 2em;
       border-bottom: 1px solid rgb(78, 159, 61);
@@ -30,14 +49,35 @@ const Body = styled.div`
         padding: 0 1em;
       }
     }
+
     & .Child3 {
-      display: flex;
       margin-top: 2em;
       border-top: 1px solid rgb(78, 159, 61);
       border-right: 1px solid rgb(78, 159, 61);
-      background: linear-gradient(190deg, rgb(25, 26, 25), rgb(0, 0, 0));
+      background: linear-gradient(45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+
       & p {
         padding: 0 1em;
+      }
+
+      & .Container1,
+      .Container2,
+      .Container3 {
+        text-align: center;
+        color: rgb(78, 159, 61);
+
+        & .LogoContainer1,
+        .LogoContainer2,
+        .LogoContainer3 {
+          display: flex;
+          justify-content: space-around;
+          padding: 0 0.5em 0.5em 0.5em;
+          font-size: 2em;
+
+          & * {
+            color: rgb(216, 233, 168);
+          }
+        }
       }
     }
   }
@@ -58,34 +98,31 @@ const Skills = () => {
           </p>
         </div>
         <div className="Child3">
-          <div>
-            <p>Languages:</p>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>C#</li>
-              <li>SQL</li>
-            </ul>
+          <div className="Container1">
+            <p>Languages</p>
+            <div className="LogoContainer1">
+              <DiHtml5 />
+              <DiCss3 />
+              <DiJavascript1 />
+              <SiCsharp />
+              <TbSql />
+            </div>
           </div>
-          <div>
-            <p>Frameworks / Libraries:</p>
-            <ul>
-              <li>.NET</li>
-              <li>Entity Framework</li>
-              <li>React</li>
-              <li>PostgreSQL</li>
-              <li>SQL Server</li>
-            </ul>
+          <div className="Container2">
+            <p>Frameworks / Libraries</p>
+            <div className="LogoContainer2">
+              <DiReact />
+              <DiDotnet />
+            </div>
           </div>
-          <div>
-            <p>Tools:</p>
-            <ul>
-              <li>Git / GitHub</li>
-              <li>REST API</li>
-              <li>JSON / XML</li>
-              <li>ER- / EER- / UML Models</li>
-            </ul>
+          <div className="Container3">
+            <p>Other</p>
+            <div className="LogoContainer3">
+              <SiJson />
+              <DiGit />
+              <SiMicrosoftsqlserver />
+              <SiPostgresql />
+            </div>
           </div>
         </div>
       </div>
