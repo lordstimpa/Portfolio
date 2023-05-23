@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+// Imported icons
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Body = styled.div`
@@ -8,13 +11,12 @@ const Body = styled.div`
   & .Links {
     position: fixed;
     right: 0;
-    width: ${(props) => (props.linkWidth ? "100vw" : "0")};
+    width: ${(props) => (props.linkWidth ? "100%" : "0")};
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgb(30, 81, 40);
     background: linear-gradient(180deg, rgb(25, 26, 25), rgb(0, 0, 0));
     transition: 1s;
-    & a {
+    & .Link {
       padding: 1.5em;
       text-align: left;
       color: rgb(78, 159, 61);
@@ -56,13 +58,15 @@ const TopNav = () => {
         <GiHamburgerMenu onClick={handleClick} />
       </div>
       <div className="Links">
-        <a class="link1">Home</a>
-        <a class="link2" id="aboutTopLink">
-          Skills
-        </a>
-        <a class="link3" id="projectsTopLink">
-          Projects
-        </a>
+        <Link to="/" className="Link" onClick={handleClick}>
+          Home
+        </Link>
+        <Link to="/resume" className="Link" onClick={handleClick}>
+          Résumé
+        </Link>
+        <Link to="/contact" className="Link" onClick={handleClick}>
+          Contact
+        </Link>
       </div>
     </Body>
   );

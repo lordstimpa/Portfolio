@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { useState } from "react";
+
+// Imported icons
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+
+// Imported imgs
 import movies from "./assets/movies.jpg";
 import bank from "./assets/bank.jpg";
 import race from "./assets/race.jpg";
@@ -52,18 +56,21 @@ const Body = styled.div`
     & .ProjectContainer {
       & > * {
         min-width: 100%;
-        min-height: 50vh;
+        min-height: 55vh;
       }
 
       .inactive {
         display: none;
       }
 
-      & img {
-        object-fit: cover;
+      & .imgContainer {
         margin: 0 1em;
-        width: 90%;
-        height: 5em;
+
+        & img {
+          object-fit: cover;
+          width: 100%;
+          height: 6em;
+        }
       }
 
       & .Links {
@@ -134,7 +141,9 @@ const Projects = () => {
           <div className="ProjectContainer">
             <div className={project === 1 ? "active" : "inactive"}>
               <h3>Film System</h3>
-              <img src={movies}></img>
+              <div className="imgContainer">
+                <img src={movies}></img>
+              </div>
               <p>
                 The Film System is an application that enables the creation of a
                 user and to list their favourite movies and genres for all to
@@ -162,7 +171,9 @@ const Projects = () => {
 
             <div className={project === 2 ? "active" : "inactive"}>
               <h3>Bank Application</h3>
-              <img src={bank}></img>
+              <div className="imgContainer">
+                <img src={bank}></img>
+              </div>
               <p>
                 Bank application developed in C# with .NET 6.0. The application
                 was developed in a team to provide banking services such as
@@ -185,7 +196,9 @@ const Projects = () => {
 
             <div className={project === 3 ? "active" : "inactive"}>
               <h3>Race Simulator</h3>
-              <img src={race}></img>
+              <div className="imgContainer">
+                <img src={race}></img>
+              </div>
               <p>
                 The Race Simulator is a console application made for running a
                 car race simulation. This was made mainly for gaining more
@@ -207,7 +220,9 @@ const Projects = () => {
 
             <div className={project === 4 ? "active" : "inactive"}>
               <h3>Dice Game</h3>
-              <img src={dices}></img>
+              <div className="imgContainer">
+                <img src={dices}></img>
+              </div>
               <p>This Dice Game was developed with vanilla JavaScript.</p>
               <p>
                 Each turn, a player repeatedly rolls a die until either a 1 is
