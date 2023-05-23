@@ -1,29 +1,18 @@
 import styled from "styled-components";
+import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from "react-icons/bs";
 
 const Body = styled.div`
-  height: 100vh;
-
   & .Parent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-
-    & :nth-child(3) a {
-      margin: 0 1em;
-      transition: 0.2s ease-in-out;
-
-      :hover {
-        cursor: pointer;
-        color: rgb(78, 159, 61);
-      }
-    }
   }
 
   & .Child1 {
     width: 90%;
-    margin-top: 2em;
+    margin-top: 4em;
 
     & h1 {
       font-size: 3.2em;
@@ -38,13 +27,29 @@ const Body = styled.div`
   & .Child2 {
     width: 90%;
     margin-top: 2em;
-    border-top: 1px solid rgb(78, 159, 61);
-    border-left: 1px solid rgb(78, 159, 61);
+    border-top: 1px solid rgb(30, 81, 40);
+    border-left: 1px solid rgb(30, 81, 40);
     background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
 
     & p {
       padding: 1em;
       margin: 0;
+    }
+  }
+
+  & .Links {
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-around;
+    & a {
+      font-size: 2em;
+      color: rgb(78, 159, 61);
+      transition: transform 0.2s;
+
+      :hover {
+        color: rgb(216, 233, 168);
+        transform: scale(1.3);
+      }
     }
   }
 
@@ -81,6 +86,17 @@ const Hero = () => {
             large projects and furher increase my knowledge about full-stack
             development.
           </p>
+          <div className="Links">
+            <a href="https://www.linkedin.com/in/steven-dalfall-54223b131/">
+              <BsLinkedin />
+            </a>
+            <a href="https://github.com/lordstimpa">
+              <BsGithub />
+            </a>
+            <a href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio.">
+              <BsFillEnvelopeFill />
+            </a>
+          </div>
         </div>
       </div>
     </Body>

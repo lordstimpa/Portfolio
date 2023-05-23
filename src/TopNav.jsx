@@ -11,7 +11,7 @@ const Body = styled.div`
     width: ${(props) => (props.linkWidth ? "100vw" : "0")};
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgb(78, 159, 61);
+    border-bottom: 1px solid rgb(30, 81, 40);
     background: linear-gradient(180deg, rgb(25, 26, 25), rgb(0, 0, 0));
     transition: 1s;
     & a {

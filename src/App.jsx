@@ -3,6 +3,7 @@ import TopNav from "./TopNav";
 import Hero from "./Hero";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Footer from "./Footer";
 
 const Body = styled.div`
   height: 100%;
@@ -18,6 +19,7 @@ function App() {
         <Skills />
         <Projects />
       </div>
+      <Footer />
     </Body>
   );
 }

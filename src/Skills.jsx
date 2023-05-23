@@ -16,8 +16,6 @@ import {
 import { TbSql } from "react-icons/tb";
 
 const Body = styled.div`
-  height: 100vh;
-
   & .Parent {
     height: 100%;
     display: flex;
@@ -25,8 +23,12 @@ const Body = styled.div`
     align-items: center;
     justify-content: center;
 
-    & .Child1,
-    .Child2,
+    & .Child1 {
+      width: 90%;
+      margin-top: 4em;
+    }
+
+    & .Child2,
     .Child3 {
       width: 90%;
       margin-top: 2em;
@@ -46,14 +48,14 @@ const Body = styled.div`
     }
 
     & .Child2 {
-      border-bottom: 1px solid rgb(78, 159, 61);
-      border-left: 1px solid rgb(78, 159, 61);
+      border-bottom: 1px solid rgb(30, 81, 40);
+      border-left: 1px solid rgb(30, 81, 40);
       background: linear-gradient(190deg, rgb(25, 26, 25), rgb(0, 0, 0));
     }
 
     & .Child3 {
-      border-top: 1px solid rgb(78, 159, 61);
-      border-right: 1px solid rgb(78, 159, 61);
+      border-top: 1px solid rgb(30, 81, 40);
+      border-right: 1px solid rgb(30, 81, 40);
       background: linear-gradient(45deg, rgb(25, 26, 25), rgb(0, 0, 0));
 
       & .Container1,

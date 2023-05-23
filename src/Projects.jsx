@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
-import megrey from "./assets/megrey.png";
+import { FiExternalLink } from "react-icons/fi";
+import movies from "./assets/movies.jpg";
+import bank from "./assets/bank.jpg";
+import race from "./assets/race.jpg";
+import dices from "./assets/dices.jpg";
 
 const Body = styled.div`
-  height: 100vh;
-
   & .Parent {
     height: 100%;
     display: flex;
@@ -33,42 +35,53 @@ const Body = styled.div`
       font-size: 0.8em;
     }
 
-    & a {
-      text-decoration: none;
-      color: rgb(78, 159, 61);
-      margin: 0.5em 1em;
-      padding: 0.5em;
-      font-size: 0.8em;
-    }
-
-    & img {
-      object-fit: cover;
-      margin: 0 1em;
-      width: 90%;
-      height: 5em;
-    }
-
-    & .Child1,
-    .Child2,
-    .Child3 {
+    & .Child1 {
+      margin-top: 4em;
       width: 90%;
     }
 
     .Child2 {
       margin-top: 2em;
-      border-left: 1px solid rgb(78, 159, 61);
-      border-right: 1px solid rgb(78, 159, 61);
-      border-top: 1px solid rgb(78, 159, 61);
+      width: 90%;
+      border-left: 1px solid rgb(30, 81, 40);
+      border-right: 1px solid rgb(30, 81, 40);
+      border-top: 1px solid rgb(30, 81, 40);
       background: linear-gradient(0deg, rgb(25, 26, 25), rgb(0, 0, 0));
     }
 
-    & .ProjectContainer > * {
-      min-width: 100%;
-      min-height: 50vh;
-    }
+    & .ProjectContainer {
+      & > * {
+        min-width: 100%;
+        min-height: 50vh;
+      }
 
-    .inactive {
-      display: none;
+      .inactive {
+        display: none;
+      }
+
+      & img {
+        object-fit: cover;
+        margin: 0 1em;
+        width: 90%;
+        height: 5em;
+      }
+
+      & .Links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+
+        & a {
+          text-decoration: none;
+          color: rgb(78, 159, 61);
+          font-size: 0.9em;
+        }
+
+        & :hover {
+          color: rgb(216, 233, 168);
+        }
+      }
     }
 
     .Arrows {
@@ -76,15 +89,17 @@ const Body = styled.div`
       justify-content: space-between;
       margin: 1em;
       font-size: 1.5em;
-      color: rgb(216, 233, 168);
+      color: rgb(78, 159, 61);
 
       & :hover {
-        color: rgb(78, 159, 61);
+        color: rgb(216, 233, 168);
         cursor: pointer;
       }
 
       & > * {
         padding: 0.2em;
+        border: 1px solid rgb(78, 159, 61);
+        border-radius: 5px;
       }
     }
   }
@@ -97,12 +112,12 @@ const Projects = () => {
     if (project > 1) {
       setProject(project - 1);
     } else {
-      setProject(5);
+      setProject(4);
     }
   };
 
   const handleRightClick = () => {
-    if (project < 5) {
+    if (project < 4) {
       setProject(project + 1);
     } else {
       setProject(1);
@@ -119,56 +134,100 @@ const Projects = () => {
           <div className="ProjectContainer">
             <div className={project === 1 ? "active" : "inactive"}>
               <h3>Film System</h3>
-              <img src={megrey}></img>
+              <img src={movies}></img>
               <p>
                 The Film System is an application that enables the creation of a
                 user and to list their favourite movies and genres for all to
                 see.
               </p>
               <p>
-                A Local SQL Server database was created to store user data. The
-                web client was created by using the React library. An API was
-                created with .NET framework with various essential tools to
-                establish a connection between server and client.
+                A Local SQL Server database was designed and setup to store user
+                data. The web client was created with the React library. An API
+                for the Film System was developed with .NET framework with
+                various essential tools to establish a connection between client
+                and server.
               </p>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> Web Client
-              </a>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> API
-              </a>
+              <div className="Links">
+                <a href="https://github.com/lordstimpa/Film-System-Client">
+                  <FaGithub /> Web Client
+                </a>
+                <a href="https://github.com/lordstimpa/Film-System-API">
+                  <FaGithub /> API
+                </a>
+                <a href="https://zippy-raindrop-359151.netlify.app/">
+                  <FiExternalLink /> View now!
+                </a>
+              </div>
             </div>
 
             <div className={project === 2 ? "active" : "inactive"}>
-              <h3>Project 2</h3>
-              <img src={megrey}></img>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> Web Client
-              </a>
+              <h3>Bank Application</h3>
+              <img src={bank}></img>
+              <p>
+                Bank application developed in C# with .NET 6.0. The application
+                was developed in a team to provide banking services such as
+                account management, funds transfer, transaction history, etc and
+                the user interface was designed to be intuitive and
+                user-friendly.
+              </p>
+              <p>
+                The project was managed within the Scrum framework which
+                involved iterative development cycles, daily stand-up meetings,
+                and regular sprint plannings and retrospectives to improve the
+                product continuously.
+              </p>
+              <div className="Links">
+                <a href="https://github.com/lordstimpa/group-project-bank-csharp">
+                  <FaGithub /> GitHub
+                </a>
+              </div>
             </div>
 
             <div className={project === 3 ? "active" : "inactive"}>
-              <h3>Project 3</h3>
-              <img src={megrey}></img>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> Web Client
-              </a>
+              <h3>Race Simulator</h3>
+              <img src={race}></img>
+              <p>
+                The Race Simulator is a console application made for running a
+                car race simulation. This was made mainly for gaining more
+                knowledge about asynchronous programming.
+              </p>
+              <p>
+                Different randomized scenarios can cause each car's
+                functionality such as wear of tires which affects the speed. As
+                a user you are able to view the current status of the ongoing
+                race and get additional information once the car reaches the
+                finish line.
+              </p>
+              <div className="Links">
+                <a href="https://github.com/lordstimpa/Race-Simulation">
+                  <FaGithub /> GitHub
+                </a>
+              </div>
             </div>
 
             <div className={project === 4 ? "active" : "inactive"}>
-              <h3>Project 4</h3>
-              <img src={megrey}></img>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> Web Client
-              </a>
-            </div>
-
-            <div className={project === 5 ? "active" : "inactive"}>
-              <h3>Project 5</h3>
-              <img src={megrey}></img>
-              <a href="https://github.com/lordstimpa/Film-System-Client">
-                <FaGithub /> Web Client
-              </a>
+              <h3>Dice Game</h3>
+              <img src={dices}></img>
+              <p>This Dice Game was developed with vanilla JavaScript.</p>
+              <p>
+                Each turn, a player repeatedly rolls a die until either a 1 is
+                rolled or the player decides to HOLD. If the player rolls a 1,
+                they score nothing and it becomes the next player's turn.
+              </p>
+              <p>
+                If the player rolls any other number, it is added to their turn
+                total and the player's turn continues. If a player chooses to
+                HOLD, their turn total is added to their score. First to score
+                100 wins.
+              </p>
+              <div className="Links">
+                <a href="https://github.com/lordstimpa/Pig-Game">
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://lordstimpa.github.io/Pig-Game/">
+                  <FiExternalLink /> Play now!
+                </a>
+              </div>
             </div>
           </div>
           <div className="Arrows">
