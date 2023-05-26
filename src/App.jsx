@@ -19,8 +19,8 @@ const Body = styled.div`
 function App() {
   return (
     <Router>
+      <TopNav />
       <Body>
-        <TopNav />
         <div className="innerParent">
           <Routes>
             <Route
