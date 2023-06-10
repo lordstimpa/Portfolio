@@ -16,7 +16,7 @@ const Body = styled.div`
 
     & h1 {
       font-size: 3.2em;
-      padding: 0 0.1em;
+      padding: 0.5em 0.1em;
       margin: 0;
       text-align: center;
       color: rgb(25, 26, 25);

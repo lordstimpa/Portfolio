@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 
-p {
+p, li {
   font-family: "Rajdhani", sans-serif;
   font-weight: "400";
 }

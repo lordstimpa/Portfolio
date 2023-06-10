@@ -39,13 +39,15 @@ const Body = styled.div`
 
     & a {
       padding: 0.5em;
-      background-color: rgb(78, 159, 61);
-      color: rgb(25, 26, 25);
-      border-radius: 0.5em;
+      font-size: 1.5em;
+      color: rgb(78, 159, 61);
+      border: 1px solid rgb(78, 159, 61);
+      border-radius: 5px;
 
       :hover {
         cursor: pointer;
-        background-color: rgb(216, 233, 168);
+        color: rgb(216, 233, 168);
+        border-color: rgb(216, 233, 168);
       }
     }
   }
