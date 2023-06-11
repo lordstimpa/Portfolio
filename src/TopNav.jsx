@@ -43,6 +43,18 @@ const Body = styled.div`
       }
     }
   }
+  & .Name {
+    position: absolute;
+
+    & h2 {
+      margin: 0.6em;
+      padding: 0;
+      color: rgb(30, 81, 40);
+    }
+    & h2::first-letter {
+      color: rgb(78, 159, 61);
+    }
+  }
 `;
 
 const TopNav = () => {
@@ -54,6 +66,9 @@ const TopNav = () => {
 
   return (
     <Body linkWidth={linkWidth}>
+      <div className="Name">
+        <h2>Steven Dalfall</h2>
+      </div>
       <div className="burgerMenu">
         <GiHamburgerMenu onClick={handleClick} />
       </div>
@@ -62,7 +77,7 @@ const TopNav = () => {
           Home
         </Link>
         <Link to="/resume" className="Link" onClick={handleClick}>
-          Résumé
+          Resume
         </Link>
         <Link to="/contact" className="Link" onClick={handleClick}>
           Contact

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from "react-icons/bs";
+import imgaaa from "./assets/aaa.jpg";
 
 const Body = styled.div`
   & .Parent {
@@ -11,8 +12,23 @@ const Body = styled.div`
   }
 
   & .Child1 {
+    width: 250px;
+    height: 250px;
+    margin-top: 5em;
+    text-align: center;
+
+    & img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: 74% 0;
+      border-radius: 100%;
+      border: 2px solid rgb(216, 233, 168);
+    }
+  }
+
+  & .Child2 {
     width: 90%;
-    margin-top: 4em;
 
     & h1 {
       font-size: 3.2em;
@@ -24,7 +40,7 @@ const Body = styled.div`
     }
   }
 
-  & .Child2 {
+  & .Child3 {
     width: 90%;
     margin-top: 2em;
     border-top: 1px solid rgb(30, 81, 40);
@@ -71,13 +87,17 @@ const Hero = () => {
     <Body>
       <div className="Parent">
         <div className="Child1">
+          <img src={imgaaa}></img>
+        </div>
+
+        <div className="Child2">
           <a class="link1">
             <p>Full Stack .NET Developer</p>
             <h1>Steven Dalfall</h1>
           </a>
         </div>
 
-        <div className="Child2">
+        <div className="Child3">
           <p>I am a Full Stack .NET Developer based in Stockholm, Sweden.</p>
           <p>
             My short term goal is to gain an entry into the IT development

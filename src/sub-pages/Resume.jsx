@@ -20,14 +20,47 @@ const Body = styled.div`
       background-color: rgb(78, 159, 61);
     }
   }
+
   & .Child2 {
     width: 90%;
     margin-top: 1em;
+
+    & h2,
+    h3 {
+      color: rgb(78, 159, 61);
+    }
   }
+
   & .Grandchild {
-    border: 2px solid rgb(30, 81, 40);
+    border-top: 1px solid rgb(30, 81, 40);
+    border-left: 1px solid rgb(30, 81, 40);
+    background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+    margin: 1em 0;
     padding: 1em;
-    margin-top: 1em;
+  }
+
+  & .Grandchild:nth-child(even) {
+  }
+
+  & .Grandchild:nth-child(odd) {
+  }
+
+  & .Lang {
+    display: flex;
+    justify-content: space-between;
+
+    & .LangItem {
+      border-top: 1px solid rgb(30, 81, 40);
+      border-left: 1px solid rgb(30, 81, 40);
+      background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+      text-align: center;
+      margin-top: 1em;
+      padding: 0.5em;
+      width: 25%;
+    }
+
+    & .LangItem:nth-child(even) {
+    }
   }
 `;
 
@@ -39,20 +72,6 @@ const Resume = () => {
           <h1>Resume</h1>
         </div>
         <div className="Child2">
-          <h2>Profile</h2>
-            <div className="Grandchild">
-              <p>
-                I consider myself a flexible and goal-oriented person
-                who understands that it is important to be adaptable.
-                Good cooperation skills with colleagues are required to
-                carry out work tasks effectively and sustainably. In
-                addition, I strongly resist stress and find it easy to
-                prioritize my work. This has developed from my time as
-                an only employee at Niotek IT AB.
-              </p>
-            </div>
-          </div>
-          <div className="Child2">
           <h2>Professional Experience</h2>
           <div className="Grandchild">
             <h3>IT / Warehouse</h3>
@@ -64,7 +83,9 @@ const Resume = () => {
               <li>Administrate a trade management platform.</li>
               <li>Order, inventory, freight handling and sales.</li>
               <li>Examination of purchased products to determine condition.</li>
-              <li>Troubleshooting, repair and software/hardware installation.</li>
+              <li>
+                Troubleshooting, repair and software/hardware installation.
+              </li>
               <li>Packing and dispatch of goods.</li>
             </ul>
           </div>
@@ -75,7 +96,10 @@ const Resume = () => {
             <p>Ludvika, Sweden</p>
             <p>Duties:</p>
             <ul>
-              <li>Help and support the residents with everything to improve their quality of life</li>
+              <li>
+                Help and support the residents with everything to improve their
+                quality of life
+              </li>
               <li>Handle inventory and financial matters.</li>
               <li>Administrate medicine.</li>
             </ul>
@@ -90,7 +114,10 @@ const Resume = () => {
               <li>Assembly and disassembly of ventilation frames.</li>
               <li>Use of sheet metal scissors and machine cutting.</li>
               <li>Maintain a good condition of machinery.</li>
-              <li>Carefully examine purchase orders and complete them to the smallest detail.</li>
+              <li>
+                Carefully examine purchase orders and complete them to the
+                smallest detail.
+              </li>
             </ul>
           </div>
         </div>
@@ -144,14 +171,16 @@ const Resume = () => {
         </div>
         <div className="Child2">
           <h2>Languages</h2>
-          <div className="Grandchild">
-            <h3>Swedish</h3>
-          </div>
-          <div className="Grandchild">
-            <h3>English</h3>
-          </div>
-          <div className="Grandchild">
-            <h3>Finnish</h3>
+          <div className="Lang">
+            <div className="LangItem">
+              <h3>Swedish</h3>
+            </div>
+            <div className="LangItem">
+              <h3>English</h3>
+            </div>
+            <div className="LangItem">
+              <h3>Finnish</h3>
+            </div>
           </div>
         </div>
       </div>
