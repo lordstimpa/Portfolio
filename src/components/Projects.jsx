@@ -6,10 +6,10 @@ import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
 // Imported imgs
-import movies from "./assets/movies.jpg";
-import bank from "./assets/bank.jpg";
-import race from "./assets/race.jpg";
-import dices from "./assets/dices.jpg";
+import movies from "../assets/movies.jpg";
+import bank from "../assets/bank.jpg";
+import race from "../assets/race.jpg";
+import dices from "../assets/dices.jpg";
 
 const Body = styled.div`
   & .Parent {

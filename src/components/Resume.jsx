@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsDownload } from "react-icons/bs";
 
 const Body = styled.div`
   & .Parent {
@@ -7,6 +8,12 @@ const Body = styled.div`
     align-items: center;
     min-height: 100vh;
   }
+
+  & h2,
+  h3 {
+    color: rgb(78, 159, 61);
+  }
+
   & .Child1 {
     width: 90%;
     margin-top: 5em;
@@ -22,13 +29,34 @@ const Body = styled.div`
   }
 
   & .Child2 {
+    margin-top: 0.5em;
+    width: 90%;
+
+    & .Download {
+      width: fit-content;
+      margin-top: 1em;
+
+      & a {
+        border: 1px solid rgb(78, 159, 61);
+        border-radius: 5px;
+        padding: 0.5em;
+        transition: 0.2s;
+        color: rgb(78, 159, 61);
+        background: rgb(0, 0, 0);
+        text-decoration: none;
+
+        :hover {
+          background: rgb(78, 159, 61);
+          color: rgb(25, 26, 25);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  & .Child3 {
     width: 90%;
     margin-top: 1em;
-
-    & h2,
-    h3 {
-      color: rgb(78, 159, 61);
-    }
   }
 
   & .Grandchild {
@@ -37,12 +65,6 @@ const Body = styled.div`
     background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
     margin: 1em 0;
     padding: 1em;
-  }
-
-  & .Grandchild:nth-child(even) {
-  }
-
-  & .Grandchild:nth-child(odd) {
   }
 
   & .Lang {
@@ -58,9 +80,6 @@ const Body = styled.div`
       padding: 0.5em;
       width: 25%;
     }
-
-    & .LangItem:nth-child(even) {
-    }
   }
 `;
 
@@ -72,6 +91,13 @@ const Resume = () => {
           <h1>Resume</h1>
         </div>
         <div className="Child2">
+          <div className="Download">
+            <a href="./assets/Steven_Dalfall_Resume.pdf" download>
+              <BsDownload /> Download .pdf
+            </a>
+          </div>
+        </div>
+        <div className="Child3">
           <h2>Professional Experience</h2>
           <div className="Grandchild">
             <h3>IT / Warehouse</h3>

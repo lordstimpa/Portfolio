@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from "react-icons/bs";
-import imgaaa from "./assets/aaa.jpg";
+import imgaaa from "../assets/aaa.jpg";
 
 const Body = styled.div`
   & .Parent {
@@ -92,7 +92,7 @@ const Hero = () => {
 
         <div className="Child2">
           <a class="link1">
-            <p>Full Stack .NET Developer</p>
+            <p>Full-stack .NET Developer</p>
             <h1>Steven Dalfall</h1>
           </a>
         </div>

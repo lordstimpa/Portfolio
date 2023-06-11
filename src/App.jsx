@@ -2,14 +2,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
 // Imported components
-import TopNav from "./TopNav";
-import Hero from "./Hero";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Resume from "./sub-pages/Resume";
-import Contact from "./sub-pages/Contact";
-import NotFound from "./sub-pages/NotFound";
-import Footer from "./Footer";
+import TopNav from "./components/TopNav";
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 const Body = styled.div`
   height: 100%;
