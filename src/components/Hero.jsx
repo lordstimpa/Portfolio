@@ -23,7 +23,8 @@ const Body = styled.div`
       object-fit: cover;
       object-position: 74% 0;
       border-radius: 100%;
-      border: 2px solid rgb(216, 233, 168);
+      border: 2px solid rgba(78, 159, 61, 0.9);
+      box-shadow: 0 0 100px 1px rgba(78, 159, 61, 0.5);
     }
   }
 
@@ -107,13 +108,19 @@ const Hero = () => {
             development.
           </p>
           <div className="Links">
-            <a href="https://www.linkedin.com/in/steven-dalfall-54223b131/">
+            <a
+              href="https://www.linkedin.com/in/steven-dalfall-54223b131/"
+              title="Add me on LinkedIn!"
+            >
               <BsLinkedin />
             </a>
-            <a href="https://github.com/lordstimpa">
+            <a href="https://github.com/lordstimpa" title="View my GitHub!">
               <BsGithub />
             </a>
-            <a href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio.">
+            <a
+              href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio."
+              title="Send me a message!"
+            >
               <BsFillEnvelopeFill />
             </a>
           </div>

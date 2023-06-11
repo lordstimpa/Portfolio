@@ -35,14 +35,14 @@ const Body = styled.div`
     & .Download {
       width: fit-content;
       margin-top: 1em;
+      font-family: "VT323", monospace;
 
       & a {
         border: 1px solid rgb(78, 159, 61);
-        border-radius: 5px;
         padding: 0.5em;
         transition: 0.2s;
         color: rgb(78, 159, 61);
-        background: rgb(0, 0, 0);
+        background: rgba(78, 159, 61, 0.1);
         text-decoration: none;
 
         :hover {

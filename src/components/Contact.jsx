@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 
 const Body = styled.div`
   & .Parent {
@@ -30,6 +31,23 @@ const Body = styled.div`
     }
   }
 
+  & .EmailContainer {
+    display: flex;
+    margin-bottom: 2em;
+    color: rgb(78, 159, 61);
+    text-decoration: none;
+    width: fit-content;
+
+    & p {
+      margin: 0;
+    }
+
+    & #EmailIcon {
+      margin-top: 0.1em;
+      margin-right: 0.5em;
+    }
+  }
+
   & .FormContainer {
     width: 90%;
 
@@ -39,18 +57,39 @@ const Body = styled.div`
 
       & label {
         margin-bottom: 0.4em;
+        color: rgb(216, 233, 168);
+      }
+
+      & input,
+      textarea {
+        padding: 0.5em;
+        color: rgb(78, 159, 61);
+        background: rgba(30, 81, 40, 0.1);
+        border: 1px solid rgb(78, 159, 61);
+        font-family: "VT323", monospace;
+        font-size: 1.1em;
+
+        :focus {
+          box-shadow: 0 0 25px 1px rgba(78, 159, 61, 0.5);
+          outline: none !important;
+        }
       }
 
       & input {
-        margin-bottom: 2em;
-        padding: 0.5em;
+        margin-bottom: 1em;
       }
 
       & textarea {
         margin-bottom: 2em;
+        resize: none;
       }
 
-      & input[type="text"] {
+      & input[type="submit"] {
+        :hover {
+          background: rgb(78, 159, 61);
+          color: rgb(25, 26, 25);
+          cursor: pointer;
+        }
       }
     }
   }
@@ -65,20 +104,31 @@ const Contact = () => {
         </div>
         <div className="Child2">
           <h2>Currently looking for an internship!</h2>
-          <p>steven.dalfall@live.se</p>
+          <a
+            className="EmailContainer"
+            href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio."
+          >
+            <BsFillEnvelopeFill id="EmailIcon" />
+            <p> steven.dalfall@live.se</p>
+          </a>
         </div>
         <div className="FormContainer">
           <form>
             <label>Name</label>
-            <input type="text"></input>
+            <input type="text" placeholder="John Wick"></input>
 
             <label>Email</label>
-            <input type="text"></input>
+            <input type="text" placeholder="john.wick@continental.org"></input>
 
             <label>Message</label>
-            <textarea name="message" rows="10" cols="30"></textarea>
+            <textarea
+              name="message"
+              rows="10"
+              cols="30"
+              placeholder="Yeaaah..."
+            ></textarea>
 
-            <input type="submit"></input>
+            <input type="submit" value="Send"></input>
           </form>
         </div>
       </div>

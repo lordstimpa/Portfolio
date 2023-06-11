@@ -29,10 +29,13 @@ const Footer = () => {
         <p>@2023 Steven Dalfall</p>
       </div>
       <div className="Container">
-        <a href="https://www.linkedin.com/in/steven-dalfall-54223b131/">
+        <a
+          href="https://www.linkedin.com/in/steven-dalfall-54223b131/"
+          title="Add me on LinkedIn!"
+        >
           <BsLinkedin />
         </a>
-        <a href="https://github.com/lordstimpa">
+        <a href="https://github.com/lordstimpa" title="View my GitHub!">
           <BsGithub />
         </a>
       </div>
