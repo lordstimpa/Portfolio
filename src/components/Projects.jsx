@@ -13,6 +13,7 @@ import dices from "../assets/dices.jpg";
 
 const Body = styled.div`
   & .Parent {
+    padding-bottom: 4em;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@ const Body = styled.div`
       border-left: 1px solid rgb(30, 81, 40);
       border-right: 1px solid rgb(30, 81, 40);
       border-top: 1px solid rgb(30, 81, 40);
-      background: linear-gradient(0deg, rgb(25, 26, 25), rgb(0, 0, 0));
+      background: linear-gradient(0deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
     }
 
     & .ProjectContainer {
@@ -107,6 +108,16 @@ const Body = styled.div`
         padding: 0.2em;
         border: 1px solid rgb(78, 159, 61);
         border-radius: 5px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .Parent {
+      & .Child1,
+      .Child2,
+      .Child3 {
+        width: 720px;
       }
     }
   }

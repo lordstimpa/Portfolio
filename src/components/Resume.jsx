@@ -35,20 +35,27 @@ const Body = styled.div`
     & .Download {
       width: fit-content;
       margin-top: 1em;
-      font-family: "VT323", monospace;
+      font-family: "Rajdhani", sans-serif;
 
       & a {
         border: 1px solid rgb(78, 159, 61);
         padding: 0.5em;
         transition: 0.2s;
         color: rgb(78, 159, 61);
-        background: rgba(78, 159, 61, 0.1);
+        background: rgb(0, 0, 0);
         text-decoration: none;
 
         :hover {
+          box-shadow: 0 0 25px 1px rgba(78, 159, 61, 0.5);
           background: rgb(78, 159, 61);
           color: rgb(25, 26, 25);
           cursor: pointer;
+        }
+        :focus {
+          box-shadow: 0 0 25px 1px rgba(78, 159, 61, 0.5);
+          background: rgb(78, 159, 61);
+          color: rgb(25, 26, 25);
+          outline: none !important;
         }
       }
     }
@@ -56,13 +63,13 @@ const Body = styled.div`
 
   & .Child3 {
     width: 90%;
-    margin-top: 1em;
+    margin-top: 3em;
   }
 
   & .Grandchild {
     border-top: 1px solid rgb(30, 81, 40);
     border-left: 1px solid rgb(30, 81, 40);
-    background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+    background: linear-gradient(-45deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
     margin: 1em 0;
     padding: 1em;
   }
@@ -74,11 +81,25 @@ const Body = styled.div`
     & .LangItem {
       border-top: 1px solid rgb(30, 81, 40);
       border-left: 1px solid rgb(30, 81, 40);
-      background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+      background: linear-gradient(-45deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
       text-align: center;
       margin-top: 1em;
       padding: 0.5em;
       width: 25%;
+    }
+  }
+
+  #LangContainer {
+    padding-bottom: 4em;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .Parent {
+      .Child1,
+      .Child2,
+      .Child3 {
+        width: 720px;
+      }
     }
   }
 `;
@@ -195,7 +216,7 @@ const Resume = () => {
             <p>Credential ID: 500/2598/3</p>
           </div>
         </div>
-        <div className="Child2">
+        <div className="Child2" id="LangContainer">
           <h2>Languages</h2>
           <div className="Lang">
             <div className="LangItem">

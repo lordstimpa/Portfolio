@@ -64,6 +64,9 @@ const Body = styled.div`
       -webkit-text-fill-color: transparent;
     }
   }
+
+  @media only screen and (min-width: 800px) {
+  }
 `;
 
 const TopNav = () => {

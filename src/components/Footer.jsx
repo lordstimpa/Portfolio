@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const Body = styled.div`
   min-height: 10em;
-  margin-top: 4em;
   padding: 4em;
   display: flex;
   flex-direction: column;
@@ -15,16 +14,17 @@ const Body = styled.div`
 
   & .NameContainer {
     padding-top: 1.6em;
+    color: rgb(78, 159, 61);
   }
 
   & .LinkContainer {
     & a {
       font-size: 1.5em;
-      color: rgb(78, 159, 61);
+      color: rgb(216, 233, 168);
       margin: 0 0.5em;
 
       :hover {
-        color: rgb(216, 233, 168);
+        color: rgb(78, 159, 61);
       }
     }
   }
@@ -45,6 +45,10 @@ const Body = styled.div`
       margin: 0 0.5em;
       font-size: 1.2em;
       color: rgb(216, 233, 168);
+
+      :hover {
+        color: rgb(78, 159, 61);
+      }
     }
   }
 `;

@@ -47,7 +47,7 @@ const Body = styled.div`
     margin-top: 2em;
     border-top: 1px solid rgb(30, 81, 40);
     border-left: 1px solid rgb(30, 81, 40);
-    background: linear-gradient(-45deg, rgb(25, 26, 25), rgb(0, 0, 0));
+    background: linear-gradient(-45deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
 
     & p {
       padding: 1em;
@@ -71,15 +71,13 @@ const Body = styled.div`
     }
   }
 
-  // Blend in on page reload
-  @keyframes blendIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.7);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
+  @media only screen and (min-width: 800px) {
+    .Parent {
+      & .Child1,
+      .Child2,
+      .Child3 {
+        width: 720px;
+      }
     }
   }
 `;

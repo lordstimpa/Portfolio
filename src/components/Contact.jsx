@@ -12,6 +12,7 @@ const {
 
 const Body = styled.div`
   & .Parent {
+    padding-bottom: 4em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,15 +34,15 @@ const Body = styled.div`
   }
 
   & .Child2 {
-    margin-top: 1em;
     width: 90%;
+    margin-top: 2em;
 
     & h2 {
       font-size: 1.2em;
     }
   }
 
-  & .EmailContainer {
+  & .ExternalEmail {
     display: flex;
     margin-bottom: 2em;
     color: rgb(78, 159, 61);
@@ -78,7 +79,7 @@ const Body = styled.div`
       textarea {
         padding: 0.5em;
         color: rgb(78, 159, 61);
-        background: rgba(30, 81, 40, 0.1);
+        background: rgb(0, 0, 0);
         border: 1px solid rgb(78, 159, 61);
         font-family: "Rajdhani", sans-serif;
 
@@ -98,8 +99,9 @@ const Body = styled.div`
       }
 
       & input[type="submit"] {
-        transition: transform 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
         :hover {
+          box-shadow: 0 0 25px 1px rgba(78, 159, 61, 0.5);
           background: rgb(78, 159, 61);
           color: rgb(25, 26, 25);
           cursor: pointer;
@@ -107,6 +109,16 @@ const Body = styled.div`
         :active {
           transform: scale(0.95);
         }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .Parent {
+      .Child1,
+      .Child2,
+      .FormContainer {
+        width: 720px;
       }
     }
   }
@@ -164,7 +176,7 @@ const Contact = () => {
         <div className="Child2">
           <h2>Currently looking for an internship!</h2>
           <a
-            className="EmailContainer"
+            className="ExternalEmail"
             href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio."
           >
             <BsFillEnvelopeFill id="EmailIcon" />
