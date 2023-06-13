@@ -35,27 +35,40 @@ const Body = styled.div`
 
   & .Child2 {
     width: 90%;
-    margin-top: 2em;
-
-    & h2 {
-      font-size: 1.2em;
-    }
-  }
-
-  & .ExternalEmail {
-    display: flex;
-    margin-bottom: 2em;
-    color: rgb(78, 159, 61);
-    text-decoration: none;
-    width: fit-content;
+    margin: 2em 0;
+    border-top: 1px solid rgb(30, 81, 40);
+    border-left: 1px solid rgb(30, 81, 40);
+    background: linear-gradient(-45deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
 
     & p {
       margin: 0;
     }
 
-    & #EmailIcon {
-      margin-top: 0.1em;
-      margin-right: 0.5em;
+    & h2 {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    & .InternInfo {
+      padding: 0 1rem 1rem 1rem;
+    }
+
+    & .ExternalEmail {
+      display: flex;
+      color: rgb(78, 159, 61);
+      text-decoration: none;
+      width: fit-content;
+      padding: 0 1rem 1rem 1rem;
+
+      & #EmailIcon {
+        margin-top: 0.1em;
+        margin-right: 0.5em;
+      }
+
+      :hover {
+        color: rgb(216, 233, 168);
+      }
     }
   }
 
@@ -77,7 +90,9 @@ const Body = styled.div`
 
       & input,
       textarea {
-        padding: 0.5em;
+        padding: 1em;
+        font-size: 1em;
+        font-weight: 600;
         color: rgb(78, 159, 61);
         background: rgb(0, 0, 0);
         border: 1px solid rgb(78, 159, 61);
@@ -130,6 +145,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const emailInput = e.target.email_from;
     const isValidEmail = emailInput.checkValidity();
@@ -182,6 +198,7 @@ const Contact = () => {
             <BsFillEnvelopeFill id="EmailIcon" />
             <p> steven.dalfall@live.se</p>
           </a>
+          <p className="InternInfo">Hello</p>
         </div>
 
         <div className="FormContainer">
