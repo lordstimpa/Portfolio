@@ -14,7 +14,6 @@ import dices from "../assets/dices.jpg";
 const Body = styled.div`
   & .Parent {
     padding-bottom: 4em;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +36,6 @@ const Body = styled.div`
     & p {
       margin: 0.5em 1em;
       padding: 0.5em;
-      font-size: 0.8em;
     }
 
     & .Child1 {
@@ -57,7 +55,7 @@ const Body = styled.div`
     & .ProjectContainer {
       & > * {
         min-width: 100%;
-        min-height: 55vh;
+        min-height: 700px;
       }
 
       .inactive {
@@ -70,24 +68,31 @@ const Body = styled.div`
         & img {
           object-fit: cover;
           width: 100%;
-          height: 6em;
+          height: 12em;
         }
       }
 
-      & .Links {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100%;
-
-        & a {
-          text-decoration: none;
-          color: rgb(78, 159, 61);
-          font-size: 0.9em;
+      & .LinksContainer {
+        margin: 0 1em;
+        padding: 0 0.5em;
+        & .LinksText {
         }
 
-        & :hover {
-          color: rgb(216, 233, 168);
+        & .Links {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+
+          & a {
+            width: fit-content;
+            text-decoration: none;
+            color: rgb(78, 159, 61);
+            margin: 0.5em;
+          }
+
+          & :hover {
+            color: rgb(216, 233, 168);
+          }
         }
       }
     }
@@ -119,6 +124,10 @@ const Body = styled.div`
       .Child3 {
         width: 720px;
       }
+    }
+
+    .ProjectContainer {
+      max-height: 550px;
     }
   }
 `;
@@ -167,16 +176,30 @@ const Projects = () => {
                 various essential tools to establish a connection between client
                 and server.
               </p>
-              <div className="Links">
-                <a href="https://github.com/lordstimpa/Film-System-Client">
-                  <FaGithub /> Web Client
-                </a>
-                <a href="https://github.com/lordstimpa/Film-System-API">
-                  <FaGithub /> API
-                </a>
-                <a href="https://zippy-raindrop-359151.netlify.app/">
-                  <FiExternalLink /> View now!
-                </a>
+              <div className="LinksContainer">
+                <div className="LinksText">
+                  <h4>Links</h4>
+                </div>
+                <div className="Links">
+                  <a
+                    href="https://github.com/lordstimpa/Film-System-Client"
+                    title="View source code!"
+                  >
+                    <FaGithub /> Web Client
+                  </a>
+                  <a
+                    href="https://github.com/lordstimpa/Film-System-API"
+                    title="View source code!"
+                  >
+                    <FaGithub /> API
+                  </a>
+                  <a
+                    href="https://zippy-raindrop-359151.netlify.app/"
+                    title="View website!"
+                  >
+                    <FiExternalLink /> View now!
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -198,10 +221,18 @@ const Projects = () => {
                 and regular sprint plannings and retrospectives to improve the
                 product continuously.
               </p>
-              <div className="Links">
-                <a href="https://github.com/lordstimpa/group-project-bank-csharp">
-                  <FaGithub /> GitHub
-                </a>
+              <div className="LinksContainer">
+                <div className="LinksText">
+                  <h4>Links</h4>
+                </div>
+                <div className="Links">
+                  <a
+                    href="https://github.com/lordstimpa/group-project-bank-csharp"
+                    title="View source code!"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -222,10 +253,18 @@ const Projects = () => {
                 race and get additional information once the car reaches the
                 finish line.
               </p>
-              <div className="Links">
-                <a href="https://github.com/lordstimpa/Race-Simulation">
-                  <FaGithub /> GitHub
-                </a>
+              <div className="LinksContainer">
+                <div className="LinksText">
+                  <h4>Links</h4>
+                </div>
+                <div className="Links">
+                  <a
+                    href="https://github.com/lordstimpa/Race-Simulation"
+                    title="View source code!"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -246,13 +285,24 @@ const Projects = () => {
                 HOLD, their turn total is added to their score. First to score
                 100 wins.
               </p>
-              <div className="Links">
-                <a href="https://github.com/lordstimpa/Pig-Game">
-                  <FaGithub /> GitHub
-                </a>
-                <a href="https://lordstimpa.github.io/Pig-Game/">
-                  <FiExternalLink /> Play now!
-                </a>
+              <div className="LinksContainer">
+                <div className="LinksText">
+                  <h4>Links</h4>
+                </div>
+                <div className="Links">
+                  <a
+                    href="https://github.com/lordstimpa/Pig-Game"
+                    title="View source code!"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                  <a
+                    href="https://lordstimpa.github.io/Pig-Game/"
+                    title="View website!"
+                  >
+                    <FiExternalLink /> Play now!
+                  </a>
+                </div>
               </div>
             </div>
           </div>
