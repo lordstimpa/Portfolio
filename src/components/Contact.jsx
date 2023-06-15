@@ -198,7 +198,15 @@ const Contact = () => {
             <BsFillEnvelopeFill id="EmailIcon" />
             <p> steven.dalfall@live.se</p>
           </a>
-          <p className="InternInfo">Hello</p>
+          <p className="InternInfo">
+            As a student at Chas Academy we are to put our theoretical knowledge into practical work.
+          </p>
+          <p className="InternInfo">
+            That is why I am on the lookout for a potential company where I can do my internship. The duration of the internship is approximately 5 months {"(11/12-2023 to 26/04-2024)."}  
+          </p>
+          <p className="InternInfo">
+            Feel free to contact me regarding any questions or interest in what I have to offer as a full-stack developer.
+          </p>
         </div>
 
         <div className="FormContainer">
