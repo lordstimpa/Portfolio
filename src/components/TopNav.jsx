@@ -22,6 +22,10 @@ const Body = styled.div`
       color: rgb(216, 233, 168);
       transition: 0.2s;
     }
+
+    & .active {
+      color: rgb(216, 233, 168);
+    }
   }
 
   & .burgerLinks {
@@ -41,7 +45,7 @@ const Body = styled.div`
   }
 
   & .Link {
-    margin: 1.5em;
+    padding: 1.5em;
     text-align: left;
     color: rgb(78, 159, 61);
     text-decoration: none;
@@ -93,9 +97,15 @@ const Body = styled.div`
 
 const TopNav = () => {
   const [linkWidth, setLinkWidth] = useState(false);
+  const [activeLink, setActiveLink] = useState(1);
 
   const handleClick = () => {
     setLinkWidth(!linkWidth);
+  };
+
+  const activeLinkClick = (e) => {
+    const clickedLink = parseInt(e.target.id.replace("Link", ""));
+    setActiveLink(clickedLink);
   };
 
   return (
@@ -104,13 +114,28 @@ const TopNav = () => {
         <h2>Steven Dalfall</h2>
       </div>
       <div className="Links">
-        <Link to="/" className="Link">
+        <Link
+          to="/"
+          className={`Link ${activeLink === 1 ? "active" : ""}`}
+          id="Link1"
+          onClick={activeLinkClick}
+        >
           Home
         </Link>
-        <Link to="/resume" className="Link">
+        <Link
+          to="/resume"
+          className={`Link ${activeLink === 2 ? "active" : ""}`}
+          id="Link2"
+          onClick={activeLinkClick}
+        >
           Resume
         </Link>
-        <Link to="/contact" className="Link">
+        <Link
+          to="/contact"
+          className={`Link ${activeLink === 3 ? "active" : ""}`}
+          id="Link3"
+          onClick={activeLinkClick}
+        >
           Contact
         </Link>
       </div>

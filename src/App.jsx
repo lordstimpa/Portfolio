@@ -24,6 +24,9 @@ const Body = styled.div`
       rgb(25, 26, 25) 51%,
       rgb(30, 81, 40) 100%
     );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     -webkit-animation: AnimateBG 20s ease infinite;
     animation: AnimateBG 20s ease infinite;
 
