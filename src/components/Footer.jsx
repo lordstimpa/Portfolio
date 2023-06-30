@@ -40,7 +40,7 @@ const Body = styled.div`
       )
       1;
 
-    & #Link {
+    & .Link {
       text-decoration: none;
       margin: 0 0.5em;
       font-size: 1.2em;
@@ -54,16 +54,25 @@ const Body = styled.div`
 `;
 
 const Footer = () => {
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+    });
+    
+  };
+
   return (
     <Body>
       <div className="SubLinkContainer">
-        <Link to="/" id="Link">
+        <Link to="/" className="Link" onClick={handleClick}>
           Home
         </Link>
-        <Link to="/resume" id="Link">
+        <Link to="/resume" className="Link" onClick={handleClick}>
           Resume
         </Link>
-        <Link to="/contact" id="Link">
+        <Link to="/contact" className="Link" onClick={handleClick}>
           Contact
         </Link>
       </div>

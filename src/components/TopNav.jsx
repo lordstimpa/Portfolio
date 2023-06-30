@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Imported icons
@@ -69,13 +69,12 @@ const Body = styled.div`
 
   & .Name {
     position: absolute;
+    top: 0.5em;
+    left: 1.5em;
 
-    & h2 {
-      font-family: "Caveat", "Arial";
+    & #NameLink {
+      font-family: 'Rajdhani', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       font-size: 2em;
-      margin: 0.23em;
-      margin-left: 0.6em;
-      padding-right: 1em;
       background: linear-gradient(rgb(78, 159, 61), rgb(216, 233, 168));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -106,12 +105,18 @@ const TopNav = () => {
   const activeLinkClick = (e) => {
     const clickedLink = parseInt(e.target.id.replace("Link", ""));
     setActiveLink(clickedLink);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+    });
+
   };
 
   return (
     <Body linkWidth={linkWidth}>
       <div className="Name">
-        <h2>Steven Dalfall</h2>
+        <Link to="/" id="NameLink">Steven Dalfall</Link>
       </div>
       <div className="Links">
         <Link
