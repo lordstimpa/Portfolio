@@ -10,6 +10,7 @@ import movies from "../assets/movies.jpg";
 import bank from "../assets/bank.jpg";
 import race from "../assets/race.jpg";
 import dices from "../assets/dices.jpg";
+import weather from "../assets/weather.jpg"
 
 const Body = styled.div`
   & .Parent {
@@ -53,6 +54,12 @@ const Body = styled.div`
     }
 
     & .ProjectContainer {
+
+      & .ProjectName {
+        display: flex;
+        justify-content: space-between;
+      }
+
       & > * {
         min-width: 100%;
         min-height: 700px;
@@ -75,8 +82,6 @@ const Body = styled.div`
       & .LinksContainer {
         margin: 0 1em;
         padding: 0 0.5em;
-        & .LinksText {
-        }
 
         & .Links {
           display: flex;
@@ -139,12 +144,12 @@ const Projects = () => {
     if (project > 1) {
       setProject(project - 1);
     } else {
-      setProject(4);
+      setProject(5);
     }
   };
 
   const handleRightClick = () => {
-    if (project < 4) {
+    if (project < 5) {
       setProject(project + 1);
     } else {
       setProject(1);
@@ -159,8 +164,37 @@ const Projects = () => {
         </div>
         <div className="Child2">
           <div className="ProjectContainer">
-            <div className={project === 1 ? "active" : "inactive"}>
-              <h3>Film System</h3>
+          <div className={project === 1 ? "active" : "inactive"}>
+              <div className="ProjectName">
+                <h3>Weather App</h3>
+                <h3>1 / 5</h3>
+              </div>  
+              <div className="imgContainer">
+                <img src={weather}></img>
+              </div>
+              <p>
+                The weather API provides basic weather information to the client, such as current temperature, humidity, and weather conditions, while the React client interacts with the API to present the data in a user-friendly interface.
+              </p>
+              <p>
+                This Weather App is a web application that consists of a weather ASP.NET Minimal API and a React client. The main goals of the project were to plan and execute software tests with a focus on unit tests, applying test-driven development practices and utilizing advanced Git version control, including the implementation of a CI/CD pipeline. The team worked in an agile manner, following the Scrum methodology.
+              </p>
+              <div className="LinksContainer">
+                <div className="Links">
+                  <a
+                    href="https://github.com/lordstimpa/TDD-Team-Project"
+                    title="View source code!"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className={project === 2 ? "active" : "inactive"}>
+              <div className="ProjectName">
+                <h3>Film System</h3>
+                <h3>2 / 5</h3>
+              </div>  
               <div className="imgContainer">
                 <img src={movies}></img>
               </div>
@@ -177,9 +211,6 @@ const Projects = () => {
                 and server.
               </p>
               <div className="LinksContainer">
-                <div className="LinksText">
-                  <h4>Links</h4>
-                </div>
                 <div className="Links">
                   <a
                     href="https://github.com/lordstimpa/Film-System-Client"
@@ -203,8 +234,11 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={project === 2 ? "active" : "inactive"}>
-              <h3>Bank Application</h3>
+            <div className={project === 3 ? "active" : "inactive"}>
+              <div className="ProjectName">
+                <h3>Bank App</h3>
+                <h3>3 / 5</h3>
+              </div>  
               <div className="imgContainer">
                 <img src={bank}></img>
               </div>
@@ -222,9 +256,6 @@ const Projects = () => {
                 product continuously.
               </p>
               <div className="LinksContainer">
-                <div className="LinksText">
-                  <h4>Links</h4>
-                </div>
                 <div className="Links">
                   <a
                     href="https://github.com/lordstimpa/group-project-bank-csharp"
@@ -236,8 +267,11 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={project === 3 ? "active" : "inactive"}>
-              <h3>Race Simulator</h3>
+            <div className={project === 4 ? "active" : "inactive"}>
+              <div className="ProjectName">
+                <h3>Race Simulator</h3>
+                <h3>4 / 5</h3>
+              </div>  
               <div className="imgContainer">
                 <img src={race}></img>
               </div>
@@ -254,9 +288,6 @@ const Projects = () => {
                 finish line.
               </p>
               <div className="LinksContainer">
-                <div className="LinksText">
-                  <h4>Links</h4>
-                </div>
                 <div className="Links">
                   <a
                     href="https://github.com/lordstimpa/Race-Simulation"
@@ -268,8 +299,11 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className={project === 4 ? "active" : "inactive"}>
-              <h3>Dice Game</h3>
+            <div className={project === 5 ? "active" : "inactive"}>
+              <div className="ProjectName">
+                <h3>Dice Game</h3>
+                <h3>5 / 5</h3>
+              </div>  
               <div className="imgContainer">
                 <img src={dices}></img>
               </div>
@@ -286,9 +320,6 @@ const Projects = () => {
                 100 wins.
               </p>
               <div className="LinksContainer">
-                <div className="LinksText">
-                  <h4>Links</h4>
-                </div>
                 <div className="Links">
                   <a
                     href="https://github.com/lordstimpa/Pig-Game"

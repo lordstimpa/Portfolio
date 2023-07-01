@@ -45,8 +45,21 @@ const Body = styled.div`
       background-color: rgb(78, 159, 61);
     }
 
-    & p {
+    & h3 {
+      text-align: left;
+      width: fit-content;
+    }
+
+    & h3, p {
       padding: 0 1em;
+    }
+
+    & li {
+      padding: 0 1em 1em 0;
+    }
+
+    & a {
+      color: rgb(78, 159, 61);
     }
 
     & .Child2 {
@@ -70,12 +83,17 @@ const Body = styled.div`
         .LogoContainer2,
         .LogoContainer3 {
           display: flex;
-          justify-content: space-around;
+          flex-wrap: wrap;
           padding: 0 0.5em 0.5em 0.5em;
-          font-size: 2em;
+          margin-left: 1em;
 
           & * {
+            min-width: 70px;
             color: rgb(216, 233, 168);
+            background: rgb(30, 81, 40);
+            border: 1px solid rgb(216, 233, 168);
+            padding: 0.5em;
+            margin: 0.5em;
           }
         }
       }
@@ -101,37 +119,60 @@ const Skills = () => {
           <h2>Skills</h2>
         </div>
         <div className="Child2">
-          <p>
-            Plentiful of knowledge has been gathered in a variety of different
-            programming languages, tools and frameworks. All to be used as my
-            instruments for developing diverse applications.
-          </p>
+        <p>
+          I have acquired a wealth of knowledge in various programming languages, tools, and frameworks, which serve as my arsenal for developing diverse applications.
+        </p>
+        <p>
+          Currently, I am studying full-stack .NET development at <a href="https://chasacademy.se/">Chas Academy</a>, where I am honing my skills and expanding my expertise.
+        </p>
+        <p>
+          I have successfully completed various full-stack development projects that showcase my skills and experience. These include:
+        </p>
+        <ul>
+          <li>
+            A weather app where users can add and view their favorite cities, demonstrating my API integration and user interface design expertise.
+          </li>
+          <li>
+            An individual project involving the creation of a film system, including a comprehensive database, API, and web client. This allowed me to showcase my skills in data modeling, backend development, and frontend design.
+          </li>
+          <li>
+            A collaborative project with classmates focused on a console-based bank application. Together, we implemented key banking functionalities, enhancing my understanding of object-oriented programming and teamwork in a software development environment.
+          </li>
+        </ul>
+        <p>
+          Skills I have gathered thus far are shown below.
+        </p>
         </div>
         <div className="Child3">
           <div className="Container1">
-            <p>Languages</p>
+            <h3>Frontend</h3>
             <div className="LogoContainer1">
-              <DiHtml5 />
-              <DiCss3 />
-              <DiJavascript1 />
-              <SiCsharp />
-              <TbSql />
+              <p>HTML5</p>
+              <p>CSS3</p>
+              <p>JavaScript</p>
+              <p>React.js</p>
+              <p>RESTful API's</p>
             </div>
           </div>
           <div className="Container2">
-            <p>Frameworks / Libraries</p>
+          <h3>Backend</h3>
             <div className="LogoContainer2">
-              <DiReact />
-              <DiDotnet />
+              <p>C#</p>
+              <p>.NET</p>
+              <p>Entity Framework</p>
+              <p>SQL</p>
+              <p>SQL Server</p>
+              <p>PostgreSQL</p>
             </div>
           </div>
           <div className="Container3">
-            <p>Other</p>
+          <h3>Other</h3>
             <div className="LogoContainer3">
-              <SiJson />
-              <DiGit />
-              <SiMicrosoftsqlserver />
-              <SiPostgresql />
+              <p>Git / GitHub</p>
+              <p>Agile / Scrum</p>
+              <p>Test-Driven Development</p>
+              <p>JSON</p>
+              <p>XML</p>
             </div>
           </div>
         </div>
