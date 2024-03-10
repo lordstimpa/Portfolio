@@ -49,8 +49,20 @@ const Body = styled.div`
       background: linear-gradient(0deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
       overflow-y: scroll;
 
+      &::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgb(78, 159, 61);
+      }
+
+      & .Project:last-of-type {
+        border: none;
+      }
+
       & .Project {
-        border-bottom: 1px solid rgb(30, 81, 40);
+        border-bottom: 5px solid rgb(78, 159, 61);
         margin: 0 2rem;
 
         & .ProjectName {
@@ -143,16 +155,10 @@ const Projects = () => {
             <div className="LinksContainer">
               <div className="Links">
                 <a
-                  href="https://github.com/lordstimpa/Film-System-API"
+                  href="https://github.com/lordstimpa/Original-Pros-Spelforening"
                   title="View source code!"
                 >
                   <FaGithub /> Github
-                </a>
-                <a
-                  href="https://zippy-raindrop-359151.netlify.app/"
-                  title="View website!"
-                >
-                  <FiExternalLink /> Website
                 </a>
               </div>
             </div>
