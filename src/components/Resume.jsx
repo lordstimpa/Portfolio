@@ -10,7 +10,7 @@ const Body = styled.div`
   }
 
   & h1 {
-    font-size: 2em;
+    font-size: 3.2em;
     padding: 0.5em;
     margin: 0;
     text-align: center;
@@ -20,8 +20,9 @@ const Body = styled.div`
 
   & h2 {
     color: rgb(25, 26, 25);
+    font-size: 2.5em;
     background-color: rgb(78, 159, 61);
-    padding: 0.4em;
+    padding: 0.3em;
     width: 50%;
   }
 
@@ -39,6 +40,7 @@ const Body = styled.div`
     width: 90%;
 
     & .Download {
+      margin-left: auto;
       width: fit-content;
       margin-top: 1em;
       font-family: "Rajdhani", sans-serif;
@@ -95,6 +97,10 @@ const Body = styled.div`
       border-top: 1px solid rgb(30, 81, 40);
       border-left: 1px solid rgb(30, 81, 40);
       background: linear-gradient(-45deg, rgba(25, 26, 25, 0), rgb(0, 0, 0));
+
+      & li {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -117,11 +123,11 @@ const Body = styled.div`
     padding-bottom: 4em;
   }
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 850px) {
     .Child1,
     .Child2,
     .Child3 {
-      width: 720px;
+      width: 800px;
     }
 
     .Date2 {
@@ -170,6 +176,56 @@ const Resume = () => {
         </div>
         <div className="Child3">
           <h2>Work Experience</h2>
+
+          <div className="Grandchild">
+            <div className="DateCont">
+              <p className="Date1">12/2023 - 05/2024</p>
+            </div>
+            <div className="Description">
+              <h3>Fullstack Developer Internship</h3>
+              <h4>Samvima</h4>
+              <p className="Date2">09/2020 - 12/2021</p>
+              <p>Stockholm, Sweden</p>
+              <p>Duties:</p>
+              <ul>
+                <li>
+                  Collaborate with the development team to design, develop, and
+                  maintain new and existing functionalities for the
+                  "Förskoleappen".
+                </li>
+                <li>
+                  Utilize Jira and agile methodologies to manage and prioritize
+                  tasks, working through various tickets/stories on the project
+                  board.
+                </li>
+                <li>
+                  Contribute to version control using Git and GitHub, ensuring
+                  code integrity and collaboration within the team.
+                </li>
+                <li>
+                  Work with SQL Server, ASP.NET, .NET, JavaScript, Razor Pages,
+                  MVC, C#, HTML, and CSS to implement backend and frontend
+                  features.
+                </li>
+                <li>
+                  Implement build automation and streamline development
+                  workflows using Gulp.
+                </li>
+                <li>
+                  Utilize Entity Framework for database interactions and data
+                  modeling.
+                </li>
+                <li>
+                  Engage in troubleshooting, debugging, and resolving technical
+                  issues across the application stack.
+                </li>
+                <li>
+                  Participate in code reviews, providing constructive feedback
+                  and ensuring code quality standards are met.
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <div className="Grandchild">
             <div className="DateCont">
@@ -293,7 +349,7 @@ const Resume = () => {
               <h4>Västerbergslagens Utbildningsförbund</h4>
               <p className="Date2">01/2016 - 06/2019</p>
               <p>Ludvika, Sweden</p>
-              <p>Social science with a specialization in behavioral sceince.</p>
+              <p>Social science with a specialization in behavioral science.</p>
             </div>
           </div>
         </div>

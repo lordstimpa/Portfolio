@@ -24,7 +24,7 @@ const Body = styled.div`
     margin-top: 5em;
 
     & h1 {
-      font-size: 2em;
+      font-size: 3.2em;
       padding: 0.5em;
       margin: 0;
       text-align: center;
@@ -45,7 +45,6 @@ const Body = styled.div`
     }
 
     & h2 {
-      font-size: 1.2em;
       margin: 0;
       padding: 1rem;
     }
@@ -133,7 +132,7 @@ const Body = styled.div`
       .Child1,
       .Child2,
       .FormContainer {
-        width: 720px;
+        width: 800px;
       }
     }
   }
@@ -190,22 +189,27 @@ const Contact = () => {
         </div>
 
         <div className="Child2">
-          <h2>Currently looking for an internship!</h2>
+          <h2>Currently seeking opportunities in my field!</h2>
           <a
             className="ExternalEmail"
             href="mailto:steven.dalfall@live.se?subject=Mail from Steven's Portfolio."
           >
             <BsFillEnvelopeFill id="EmailIcon" />
-            <p> steven.dalfall@live.se</p>
+            <p>steven.dalfall@live.se</p>
           </a>
           <p className="InternInfo">
-            As a student at Chas Academy we are to put our theoretical knowledge into practical work.
+            As I near the completion of my studies at Chas Academy, I am eager
+            to apply my theoretical knowledge in a real-world setting.
           </p>
           <p className="InternInfo">
-            That is why I am on the lookout for a potential company where I can do my internship. The duration of the internship is approximately 5 months {"(11/12-2023 to 26/04-2024)."}  
+            I will be finishing my internship in May 2024 and am actively
+            seeking a position where I can further develop my skills. The
+            duration of the internship will be approximately 5 months (from
+            November 2023 to April 2024).
           </p>
           <p className="InternInfo">
-            Feel free to contact me regarding any questions or interest in what I have to offer as a full-stack developer.
+            Please feel free to reach out to discuss any opportunities or
+            inquiries regarding my capabilities as a full-stack developer.
           </p>
         </div>
 

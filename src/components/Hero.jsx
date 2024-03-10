@@ -34,11 +34,15 @@ const Body = styled.div`
 
     & h1 {
       font-size: 3.2em;
-      padding: 0.5em 0.1em;
+      padding: 0.5em;
       margin: 0;
       text-align: center;
       color: rgb(25, 26, 25);
       background-color: rgb(78, 159, 61);
+    }
+
+    & h5 {
+      margin: 1rem 0;
     }
   }
 
@@ -71,12 +75,12 @@ const Body = styled.div`
     }
   }
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 850px) {
     .Parent {
       & .Child1,
       .Child2,
       .Child3 {
-        width: 720px;
+        width: 800px;
       }
     }
   }
@@ -92,7 +96,7 @@ const Hero = () => {
 
         <div className="Child2">
           <a class="link1">
-            <p>Full-stack .NET Developer</p>
+            <h5>Full-stack .NET Developer</h5>
             <h1>Steven Dalfall</h1>
           </a>
         </div>

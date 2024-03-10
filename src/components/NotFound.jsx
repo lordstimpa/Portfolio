@@ -13,7 +13,7 @@ const Body = styled.div`
     margin-top: 4em;
 
     & h1 {
-      font-size: 2em;
+      font-size: 3em;
       padding: 0 0.1em;
       margin: 0;
       text-align: center;
@@ -48,6 +48,16 @@ const Body = styled.div`
         cursor: pointer;
         color: rgb(216, 233, 168);
         border-color: rgb(216, 233, 168);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .Parent {
+      & .Child1,
+      .Child2,
+      .Child3 {
+        width: 800px;
       }
     }
   }
