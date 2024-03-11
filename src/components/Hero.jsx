@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { BsLinkedin, BsGithub, BsFillEnvelopeFill } from "react-icons/bs";
-import imgaaa from "../assets/aaa.jpg";
+import portrait from "../assets/portrait.jpg";
 
 const Body = styled.div`
   & .Parent {
@@ -91,7 +91,7 @@ const Hero = () => {
     <Body>
       <div className="Parent">
         <div className="Child1">
-          <img src={imgaaa}></img>
+          <img src={portrait}></img>
         </div>
 
         <div className="Child2">

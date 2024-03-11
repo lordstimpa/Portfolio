@@ -168,7 +168,7 @@ const Skills = () => {
               <p>JQuery</p>
               <p>React.js</p>
               <p>ASP.NET</p>
-              <p>RESTful API's</p>
+              <p>AJAX</p>
             </div>
           </div>
           <div className="Container2">
@@ -183,6 +183,7 @@ const Skills = () => {
               <p>PostgreSQL</p>
               <p>xUnit</p>
               <p>Hangfire</p>
+              <p>RESTful API's</p>
             </div>
           </div>
           <div className="Container3">
@@ -194,6 +195,9 @@ const Skills = () => {
               <p>JSON</p>
               <p>XML</p>
               <p>Gulp</p>
+              <p>Jira</p>
+              <p>Azure</p>
+              <p>Linux</p>
             </div>
           </div>
         </div>
